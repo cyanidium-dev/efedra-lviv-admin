@@ -9,13 +9,17 @@
     "start": "sanity start",
     "build": "sanity build",
     "deploy": "sanity deploy",
-    "deploy-graphql": "sanity graphql deploy"
+    "deploy-graphql": "sanity graphql deploy",
+    "import-price": "node import-price-data.mjs",
+    "publish-price": "node publish-price-categories.mjs"
   },
   "keywords": [
     "sanity"
   ],
   "dependencies": {
+    "@sanity/client": "^7.12.1",
     "@sanity/vision": "^4.12.0",
+    "dotenv": "^17.2.3",
     "react": "^19.1",
     "react-dom": "^19.1",
     "sanity": "^4.12.0",

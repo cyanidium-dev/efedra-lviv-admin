@@ -48,7 +48,7 @@ export const priceCategory = defineType({
               of: [
                 defineField({
                   type: 'object',
-                  name: 'service',
+                  name: 'priceService',
                   title: 'Послуга',
                   fields: [
                     defineField({
@@ -62,7 +62,6 @@ export const priceCategory = defineType({
                       title: 'Ціна',
                       type: 'string',
                       description: 'Наприклад: від 250 або 300-400',
-                      validation: Rule => Rule.required(),
                     }),
                     defineField({
                       name: 'duration',

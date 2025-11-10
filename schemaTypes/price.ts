@@ -12,6 +12,12 @@ export const priceCategory = defineType({
       validation: Rule => Rule.required(),
     }),
     defineField({
+      name: 'order',
+      title: 'Порядок відображення в секції категорії послуг',
+      type: 'number',
+      validation: Rule => Rule.required(),
+    }),
+    defineField({
       name: 'colorScheme',
       title: 'Кольорова схема',
       type: 'string',
@@ -42,6 +48,12 @@ export const priceCategory = defineType({
               validation: Rule => Rule.required(),
             }),
             defineField({
+              name: 'order',
+              title: 'Порядок відображення в секції категорії послуг',
+              type: 'number',
+              validation: Rule => Rule.required(),
+            }),
+            defineField({
               name: 'services',
               title: 'Послуги',
               type: 'array',
@@ -68,6 +80,12 @@ export const priceCategory = defineType({
                       title: 'Тривалість процедури',
                       type: 'string',
                       description: 'Наприклад: 30 хвилин',
+                    }),
+                    defineField({
+                      name: 'order',
+                      title: 'Порядок відображення в секції категорії послуг',
+                      type: 'number',
+                      validation: Rule => Rule.required(),
                     }),
                   ],
                 }),

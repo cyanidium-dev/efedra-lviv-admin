@@ -15,7 +15,8 @@ export const priceCategory = defineType({
       name: 'order',
       title: 'Порядок відображення в секції категорії послуг',
       type: 'number',
-      validation: Rule => Rule.required(),
+      validation: Rule =>
+        Rule.required().min(1).error('Вкажіть порядок від 1 і вище'),
     }),
     defineField({
       name: 'colorScheme',
@@ -51,7 +52,8 @@ export const priceCategory = defineType({
               name: 'order',
               title: 'Порядок відображення в секції категорії послуг',
               type: 'number',
-              validation: Rule => Rule.required(),
+              validation: Rule =>
+                Rule.required().min(1).error('Вкажіть порядок від 1 і вище'),
             }),
             defineField({
               name: 'services',
@@ -85,7 +87,10 @@ export const priceCategory = defineType({
                       name: 'order',
                       title: 'Порядок відображення в секції категорії послуг',
                       type: 'number',
-                      validation: Rule => Rule.required(),
+                      validation: Rule =>
+                        Rule.required()
+                          .min(1)
+                          .error('Вкажіть порядок від 1 і вище'),
                     }),
                   ],
                 }),

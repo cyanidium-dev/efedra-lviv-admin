@@ -30,6 +30,13 @@ export const service = defineType({
       },
       validation: Rule => Rule.required(),
     }),
+    defineField({
+      name: 'order',
+      title: 'Порядок відображення в секції категорії послуг',
+      type: 'number',
+      validation: Rule =>
+        Rule.required().min(1).error('Вкажіть порядок від 1 і вище'),
+    }),
   ],
   preview: {
     select: {

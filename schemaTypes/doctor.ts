@@ -26,5 +26,12 @@ export const doctor = defineType({
       type: 'string',
       validation: Rule => Rule.required(),
     }),
+    defineField({
+      name: 'order',
+      title: 'Порядок відображення на сайті',
+      type: 'number',
+      validation: Rule =>
+        Rule.required().min(1).error('Вкажіть порядок від 1 і вище'),
+    }),
   ],
 });

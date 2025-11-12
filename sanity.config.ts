@@ -39,18 +39,9 @@ export default defineConfig({
                   .filter('_type == "priceCategory"')
               ),
             S.listItem()
-              .title('Послуги (стара версія)')
+              .title('Відгуки')
               .child(
-                S.documentList()
-                  .title('Послуги (стара версія)')
-                  .filter('_type == "serviceOld"')
-              ),
-            S.listItem()
-              .title('Лікарі (стара версія)')
-              .child(
-                S.documentList()
-                  .title('Лікарі (стара версія)')
-                  .filter('_type == "doctorOld"')
+                S.documentList().title('Відгуки').filter('_type == "review"')
               ),
           ]),
     }),

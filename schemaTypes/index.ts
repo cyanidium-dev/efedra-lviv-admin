@@ -1,15 +1,7 @@
-import { doctorOld } from './doctorOld';
 import { doctor } from './doctor';
 import { post } from './post';
 import { service } from './service';
 import { priceCategory } from './price';
-import serviceOld from './serviceOld';
+import { review } from './review';
 
-export const schemaTypes = [
-  doctorOld,
-  doctor,
-  post,
-  priceCategory,
-  service,
-  serviceOld,
-];
+export const schemaTypes = [doctor, post, priceCategory, service, review];
